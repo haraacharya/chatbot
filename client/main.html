@@ -1,0 +1,18 @@
+<head>
+  <title>chatbot</title>
+</head>
+
+<body>
+  <h1>CHATBOT</h1>
+  {{>loginButtons}}
+  {{> chat}}
+
+</body>
+
+<template name="chat">
+    {{#each messages}}
+      <p><strong>{{name}}</strong>: {{text}}  ({{createdAt}})</p>
+    {{/each}}
+  <p>Message: <input type="text" id="message"></p>
+  <p><button class="clickable">Send</button></p>
+</template>
